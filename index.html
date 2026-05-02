@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noi Tape-CD | The Legend of Analog Music</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Pridi:wght@300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-gold: #aa841e;
+            --matte-black: #121212;
+            --card-bg: rgba(30, 30, 30, 0.9); /* ปรับให้โปร่งแสงนิดๆ เพื่อให้เห็นพื้นหลัง */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Pridi', serif;
+            color: #e0e0e0;
+            /* เปลี่ยนพื้นหลังเป็นรูป Live Aid */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://img1.pic.in.th/images/Live-Aid-web-optimised-1000-1000x600.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        /* --- Vinyl Animation --- */
+        .record-box {
+            display: flex;
+            justify-content: center;
+            padding: 30px 0 10px;
+        }
+
+        .vinyl {
+            width: 100px;
+            height: 100px;
+            background: repeating-radial-gradient(circle, #222, #222 2px, #111 4px, #222 5px);
+            border-radius: 50%;
+            border: 3px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 25px rgba(0,0,0,0.8);
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* --- Header --- */
+        header { text-align: center; margin-bottom: 25px; }
+        .title-gold {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .sub-title {
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        /* --- Storefront Image --- */
+        .store-img-container {
+            max-width: 460px;
+            margin: 0 auto 30px;
+            padding: 8px;
+            border: 1px solid var(--dark-gold);
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .store-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            border: 1px solid #333;
+        }
+
+        /* --- Container & Links --- */
+        .container { max-width: 500px; margin: 0 auto; padding: 0 20px; }
+
+        .item-link {
+            background: var(--card-bg);
+            border-left: 5px solid var(--gold);
+            margin-bottom: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s ease-in-out;
+            border-radius: 4px;
+            backdrop-filter: blur(5px); /* เพิ่มเอฟเฟกต์เบลอหลังปุ่ม */
+        }
+
+        .item-link:hover {
+            background: rgba(50, 50, 50, 0.95);
+            transform: translateX(8px);
+            border-left-width: 12px;
+        }
+
+        .item-label { font-size: 0.7rem; color: var(--gold); text-transform: uppercase; display: block; }
+        .item-value { font-size: 1.3rem; font-weight: 500; }
+
+        /* --- Map Section --- */
+        .map-section {
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .map-header { padding: 10px; font-size: 0.75rem; text-align: center; color: var(--gold); }
+
+        footer { text-align: center; padding: 40px; color: #fff; text-shadow: 1px 1px 2px #000; font-size: 0.75rem; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <div class="record-box">
+        <div class="vinyl">
+            <div style="width: 30px; height: 30px; background: var(--gold); border-radius: 50%; border: 3px solid #000;"></div>
+        </div>
+    </div>
+
+    <header>
+        <h1 class="title-gold">หน่อยเทป-ซีดี</h1>
+        <div class="sub-title">The Legend of Analog Music</div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Storefront Image -->
+        <div class="store-img-container">
+            <img src="https://img1.pic.in.th/images/306003711_419699216922250_2077622661288429953_n.jpg" alt="Noi Tape-CD Shop" class="store-img">
+        </div>
+
+        <!-- Contact Links -->
+        <a href="tel:0877989522" class="item-link">
+            <div>
+                <span class="item-label">โทรสอบถาม / สั่งซื้อ</span>
+                <span class="item-value">087-798-9522</span>
+            </div>
+            <span style="font-size: 1.6rem;">📞</span>
+        </a>
+
+        <a href="https://line.me/ti/p/~P7565" class="item-link">
+            <div>
+                <span class="item-label">LINE OFFICIAL</span>
+                <span class="item-value">ID: P7565</span>
+            </div>
+            <span style="font-size: 1.6rem;">💬</span>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100066465245761" class="item-link">
+            <div>
+                <span class="item-label">FACEBOOK PAGE</span>
+                <span class="item-value">หน่อยเทป-ซีดี</span>
+            </div>
+            <span style="font-size: 1.6rem;">🌐</span>
+        </a>
+
+        <!-- Location Map -->
+        <div class="map-section">
+            <div class="map-header">📍 IMPERIAL WORLD SAMRONG (4th Floor)</div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.108483259461!2d100.59391157589283!3d13.650212899518175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d5f7bb9b5f65d%3A0x7c08b7922cd836b4!2z4Lit4Li04Lih4Lie4Li14LmA4Lij4Li14Lii4Lil4Lia4Lix4LiZ4Lid4Liy4LihIOC4quC4s-C5guC4o-C4hyDguKrguLPguYLguKPguIcg4Liq4Liz4LmC4Lij4LiH!5e0!3m2!1sth!2sth!4v1714631800000!5m2!1sth!2sth" width="100%" height="200" style="border:0; filter: grayscale(1) invert(0.9);" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        NOI TAPE-CD &copy; 2026 &bull; ANALOG NEVER DIE
+    </footer>
+
+</body>
+</html>
